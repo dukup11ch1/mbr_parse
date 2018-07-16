@@ -3,7 +3,7 @@ import sys
 import struct
 import codecs
 
-def li2bi(data): return struct.unpack("<I",codecs.decode(str(struct.pack('>4s', data).encode("hex")),"hex"))[0]#little endian
+def li2bi(data): return struct.unpack("<I",codecs.decode(str(struct.pack('>4s', data).encode("hex")),"hex"))[0]#convert to bigendian
 
 fp = open("../mbr_128.dd","rb")#파일 오픈
 
